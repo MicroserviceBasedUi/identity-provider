@@ -2,7 +2,7 @@ var target = Argument("target", "Default");
 
 var sourceDir = @".\src";
 var projectDir = System.IO.Path.Combine(sourceDir, "Zuehlke.IdentityProvider");
-var project = System.IO.Path.Combine(projectDir, "Zuehlke.IdentityProvider.csproj");
+var project = "Zuehlke.IdentityProvider.csproj";
 
 var runSettings = new DotNetCoreRunSettings
 {
@@ -26,7 +26,7 @@ Task("Run")
     .IsDependentOn("Build")
     .Does(() =>
 {
-    DotNetCoreRun(project,runSettings);
+    DotNetCoreRun(project,"--args", runSettings);
 });
 
 Task("Default")
