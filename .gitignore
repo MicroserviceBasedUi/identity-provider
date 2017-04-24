@@ -252,4 +252,5 @@ paket-files/
 *.sln.iml
 
 #cake
-.tools/
+tools
+dest
