@@ -22,7 +22,7 @@ Task("Build")
     DotNetCoreBuild(sourceDir);
 });
 
-Task("Run")
+Task("Start")
     .IsDependentOn("Build")
     .Does(() =>
 {
